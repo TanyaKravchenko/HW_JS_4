@@ -6,20 +6,48 @@
 число, то вывести сообщение об ошибке ввода. При подсчете учесть, что пользователь
 может ввести отрицательное значение.');*/
 
+/*let sum = 0;
+let num;
+let average;
 
-var amount =0;
+while(true){
+  num = prompt('Введите число');
+ 
+  if(num === null){
+    alert('Спасибо!');
+    break;
+  }
 
+  if(num == 0 || num == " "){
+    break;  
+    
+  }
+  
+  if(num < 0 || isNaN(num)) {
+    alert('Введите число > 0');
+    break;
+  }
+  sum += +num;
+  } 
+  
+  console.log(sum);
+  console.log(average);*/
 
-label: for (var i=0;;i++){
-var user = Number (prompt("введите число"));
-if(user){
-var amount =+amount+user;
-continue label;
-}else {
-break;
-}
-}
-var average = amount/i;
-document.write(i+''); //количество введенных чисел
-document.write('сумма:'+' '+amount);
-document.write('среднее арифметическое:'+' '+average);
+  let sum = 0;
+  let num;
+  let average;
+
+  for (var i=0;;i++){
+  num = Number (prompt("введите число"));
+    if(num == 0 || num == " "){
+      break;
+    }
+    if(num < 0 || isNaN(num)) {
+      alert('Введите число > 0');
+    }
+    sum += +num;
+    }
+    average = sum/i;
+    document.write(i+'' + "</br>"); //количество введенных чисел
+    document.write('сумма:'+' '+sum + "</br>");
+    document.write('среднее арифметическое:'+' '+average);
